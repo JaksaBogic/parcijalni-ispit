@@ -1,23 +1,25 @@
-{
-  "name": "parcijalni-ispit",
-  "version": "1.0.0",
-  "description": "Razvojna okolina - parcijalni ispit",
-  "main": "app.js",
-  "dependencies": {
-    "express": "^4.17.1"
+@ -6,13 +6,11 @@
+  "author": "Travis Fischer <travis@transitivebullsh.it>",
+  "type": "module",
+  "exports": {
+    "import": "./dist/random.module.js",
+    "types": "./dist/index.d.ts",
+    "import": "./dist/random.module.js",
+    "default": "./dist/random.module.js"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/algebra-training/parcijalni-ispit.git"
-  },
-  "author": "algebra-training",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/algebra-training/parcijalni-ispit/issues"
-  },
-  "homepage": "https://github.com/algebra-training/parcijalni-ispit#readme"
-}
+  "files": [
+    "dist"
+  ],
+  "files": ["dist"],
+  "source": "./src/index.ts",
+  "module": "./dist/random.module.js",
+  "types": "./dist/index.d.ts",
+@ -82,8 +80,6 @@
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=@esbuild-kit/esm-loader"
+    ]
+    "nodeArguments": ["--loader=@esbuild-kit/esm-loader"]
+  }
